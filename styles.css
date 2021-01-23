@@ -1,0 +1,260 @@
+body {
+  background-color: rgb(241, 241, 241);
+
+  font-family: "Arial Narrow", Arial, sans-serif;
+
+  display: grid;
+  grid-template-rows: 25% 25% 1em 1fr 1em 1fr 1em 0.25fr auto;
+  grid-template-columns: 2vw 2vw repeat(5, 17vw 1vw) 2vw 2vw;
+}
+
+html {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+#date-greeting {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+}
+
+article {
+  border: 2px solid rgb(140, 194, 227);
+  border-radius: 0.5em;
+  width: auto;
+
+  padding: 1em;
+
+  grid-row-start: 4;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+article h2 {
+  font-size: 100%;
+}
+
+#quote {
+  font-style: italic;
+  font-size: 125%;
+  color: rgb(98, 135, 158);
+  width: auto;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: span 9;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-left: -1em; /*Offsets the left side spacing on the first card.*/
+}
+
+.cards li {
+  flex: auto;
+  padding: 0.5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  border: 2px solid rgb(98, 135, 158);
+  background-color: rgb(208, 208, 232);
+}
+
+.cards li img {
+  max-width: 6em;
+  max-height: 6em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards li h2 {
+  color: rgb(98, 135, 158);
+}
+
+#programming-langs {
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+#technologies {
+  grid-row-start: 6;
+  grid-row-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+#programming-page-desc {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: span 8;
+}
+
+#home-article img {
+  width: 100%;
+}
+
+header {
+  /*background-color: rgb(66, 245, 194);*/
+  background-color: rgb(186, 218, 238);
+  color: rgb(84, 92, 89);
+  padding: 2vw;
+  font-size: 100%;
+  line-height: 150%;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+header h1 {
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgb(98, 135, 158);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  grid-column-start: 2;
+}
+
+nav a {
+  flex: 12em;
+  background-color: rgb(98, 135, 158);
+  color: white;
+  padding: 0.1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 0.3em;
+  max-width: 7em;
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+}
+
+#resume-article ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+h3 {
+  font-size: 125%;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+article p {
+  font-size: 100%;
+}
+
+article h3 {
+  font-size: 125%;
+}
+
+#home-article {
+  text-indent: 1em;
+}
+
+footer {
+  font-size: 75%;
+  margin-top: 5em;
+  background-color: rgb(98, 135, 158);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+
+  grid-row: 8;
+  grid-column-start: 1;
+  grid-column-end: 14;
+}
+
+@media screen and (min-width: 250px) {
+  body {
+    background-color: rgb(241, 241, 241);
+    font-family: "Arial Narrow", Arial, sans-serif;
+    grid-template-rows: 25% 25% 1em 1fr 1em 1fr 1em 0.25fr auto;
+  }
+
+  html {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  #home-article img {
+    width: 100%;
+  }
+
+  article h2 {
+    font-size: 150%;
+  }
+
+  #resume-article ul {
+    list-style-position: initial;
+    padding-left: 1em;
+  }
+
+  #programming-langs {
+    grid-column-start: 3;
+  }
+  
+  #technologies {
+    grid-column-start: 3;
+  }
+
+  #quote {
+    grid-column-start: 3;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    background-color: rgb(241, 241, 241);
+    font-family: "Arial Narrow", Arial, sans-serif;
+    grid-template-rows: 15em 1em 5em 1fr 1em 1fr 1em 0.25fr auto;
+  }
+
+  html {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  header {
+    grid-column-start: 2;
+    grid-column-end: 14;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  article {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    grid-column-end: 10;
+  }
+
+  article h2 {
+    font-size: 150%;
+  }
+
+  #home-article img {
+    width: 50%;
+  }
+
+  #quote {
+    grid-column-start: 3;
+    grid-column-end: 13;
+    font-size: 125%;
+  }
+}
+
